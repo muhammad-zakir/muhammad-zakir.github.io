@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
-    "polka": "^1.0.0-next.17",
+    "polka": "^1.0.0-next.19",
     "sirv": "^1.0.16"
   },
   "devDependencies": {
