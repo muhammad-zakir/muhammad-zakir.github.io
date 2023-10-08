@@ -31,7 +31,7 @@ jobs:
           BASE_PATH: '/muhammad-zakir.github.io'
         run: |
           pnpm run build
-          touch build/.nojekyll
+          touch ./build/.nojekyll
           echo 'zakir.id' > ./build/CNAME
 
       - name: deploy
