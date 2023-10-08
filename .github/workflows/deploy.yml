@@ -25,11 +25,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: build
+      - name: build & deploy
         env:
           BASE_PATH: '/muhammad-zakir.github.io'
-        run: |
-          pnpm deploy
+        run: pnpm run deploy
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
