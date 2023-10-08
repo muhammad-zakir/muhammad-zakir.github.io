@@ -1,6 +1,0 @@
-.DS_Store
-yarn-error.log
-/.idea/
-/__sapper__/
-/node_modules/
-/src/node_modules/@sapper/
