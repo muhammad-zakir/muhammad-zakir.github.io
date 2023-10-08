@@ -32,7 +32,7 @@ jobs:
         run: |
           pnpm run build
           touch build/.nojekyll
-          echo zakir.id > ./build/CNAME"
+          echo 'zakir.id' > ./build/CNAME
 
       - name: deploy
         run: |
