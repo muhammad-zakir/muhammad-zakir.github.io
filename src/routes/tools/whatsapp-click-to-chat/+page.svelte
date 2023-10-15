@@ -18,7 +18,7 @@
 <div class="container h-full mx-auto flex justify-center items-center">
   <div class="space-y-10 text-center flex flex-col items-center">
     <input class="input" title="Input WhatsApp number" type="tel" placeholder="628123456789" bind:value={whatsAppNumber} on:input={parseWhatsAppNumber}/>
-    {#if whatsAppNumber.length >= 7}
+    {#if whatsAppNumber.length >= 10}
       <a href="https://wa.me/{whatsAppNumber}" class="btn bg-primary-500">
         <span class="flex-auto">Start chat</span>
       </a>
