@@ -26,37 +26,22 @@
         <span class="flex-auto">Start chat</span>
       </a>
     {/if}
-
-    <h4 class="h4">Frequently Asked Questions</h4>
-
-    <Accordion class="bg-primary-500">
-      <AccordionItem>
-        <svelte:fragment slot="lead">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-          </svg>
-        </svelte:fragment>
-        <svelte:fragment slot="summary">What?</svelte:fragment>
-        <svelte:fragment slot="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </svelte:fragment>
-      </AccordionItem>
-      <AccordionItem>
-        <svelte:fragment slot="lead">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-          </svg>
-        </svelte:fragment>
-        <svelte:fragment slot="summary">Why?</svelte:fragment>
-        <svelte:fragment slot="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </svelte:fragment>
-      </AccordionItem>
-    </Accordion>
   </div>
 </div>
 
 <style lang="postcss">
+    figure {
+        @apply flex relative flex-col;
+    }
+    figure svg,
+    .img-bg {
+        @apply w-64 h-64 md:w-80 md:h-80;
+    }
+    .img-bg {
+        @apply absolute z-[-1] rounded-full blur-[50px] transition-all;
+        animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite,
+        glow 5s linear infinite;
+    }
     @keyframes glow {
         0% {
             @apply bg-primary-400/50;
