@@ -16,7 +16,7 @@
 <Drawer width="w-[20vw]">
 	<AppRail>
 		<svelte:fragment slot="lead">
-			<AppRailAnchor href="/" selected={$page.url.pathname === '/'}>
+			<AppRailAnchor href="/" selected={$page.url.pathname === '/'} on:click={() => (drawerStore.close())}>
 				<svelte:fragment slot="lead">
 					<span class="badge">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -28,7 +28,7 @@
 			</AppRailAnchor>
 		</svelte:fragment>
 		<svelte:fragment slot="default">
-			<AppRailAnchor href="/tools/whatsapp-click-to-chat" selected={$page.url.pathname === '/tools/whatsapp-click-to-chat'}>
+			<AppRailAnchor href="/tools/whatsapp-click-to-chat" selected={$page.url.pathname === '/tools/whatsapp-click-to-chat'} on:click={() => (drawerStore.close())}>
 				<svelte:fragment slot="lead">
 					<span class="badge">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
