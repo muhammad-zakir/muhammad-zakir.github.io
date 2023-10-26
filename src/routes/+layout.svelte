@@ -13,7 +13,7 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<Drawer height="h-[101vh]" width="w-[19vw]">
+<Drawer width="w-[20vw]">
 	<AppRail>
 		<svelte:fragment slot="lead">
 			<AppRailAnchor href="/" selected={$page.url.pathname === '/'}>
