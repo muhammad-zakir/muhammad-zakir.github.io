@@ -17,7 +17,7 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
   <div class="space-y-10 text-center flex flex-col items-center">
-    <input class="input" title="Input WhatsApp number" type="tel" placeholder="628123456789" bind:value={whatsAppNumber} on:input={parseWhatsAppNumber}/>
+    <input class="input" title="Input WhatsApp number" type="tel" placeholder="628123456789" bind:value={whatsAppNumber} on:input={parseWhatsAppNumber} name="whatsAppNumber"/>
 
     {#if whatsAppNumber.length >= 10}
       <a href="https://wa.me/{whatsAppNumber}" class="bg-primary-500 btn btn-lg">
